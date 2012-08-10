@@ -1,0 +1,3 @@
+[
+        { "keys": ["ctrl+s","ctrl+s"], "command": "sublime_surround"}
+]
