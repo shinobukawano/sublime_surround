@@ -18,7 +18,6 @@ class SublimeSurroundCommand(sublime_plugin.TextCommand):
                 # Replace the selection with transformed text
                 self.view.replace(self.edit, region, surroundStr)
 
-
     def run(self, edit):
 
         self.edit = edit
