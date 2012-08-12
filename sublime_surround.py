@@ -23,5 +23,5 @@ class SublimeSurroundCommand(sublime_plugin.TextCommand):
         self.edit = edit
 
         # Show input panel for surround word, then handling input
-        self.view.window().show_input_panel('Surrond Word is', '',
+        self.view.window().show_input_panel('Surrond Word: ', '',
             self.on_done, None, None)
