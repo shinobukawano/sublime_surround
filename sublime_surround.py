@@ -15,8 +15,14 @@ class SublimeSurroundCommand(sublime_plugin.TextCommand):
                 # Surround word by input word
                 surroundStr = word + s + word
 
+                # Begin new edit session for `undo` to work correctly
+                edit = self.view.begin_edit();
+
                 # Replace the selection with transformed text
-                self.view.replace(self.edit, region, surroundStr)
+                self.view.replace(edit, region, surroundStr)
+
+                # We need to end the session explicitely
+                self.view.end_edit(edit);
 
     def run(self, edit):
 
